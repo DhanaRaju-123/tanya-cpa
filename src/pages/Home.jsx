@@ -8,6 +8,8 @@ import IMG1 from '../images/02.jpg'
 import IMG2 from '../images/03.jpg'
 import IMG3 from '../images/06.jpg'
 import IMG4 from '../images/tanya.jpg'
+import atHerDesk from '../images/tanya.jpg';
+
 
 const gallery = [
   { title: 'Family day out', image: IMG1 },
@@ -20,8 +22,8 @@ export default function Home() {
   return (
     <div>
       {/* HERO */}
-      <section className="relative h-[100vh] min-h-[560px] flex items-center overflow-hidden bg-primary-dark">
-    
+      <section className="relative h-[80vh] min-h-[560px] flex items-center ">
+   
         <video
           autoPlay
           muted
@@ -34,9 +36,9 @@ export default function Home() {
             type="video/mp4"
           />
         </video>
-        <div className="" />
+        
 
-        <div className="relative max-w-7xl mx-auto px-6 w-full">
+        <div className="relative max-w-7xl mx-auto px-6 items-center overflow-hidden w-full">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -58,20 +60,14 @@ export default function Home() {
           </motion.div>
         </div>
 
-        <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-white to-transparent" />
       </section>
 
       {/* STATS */}
       <section className="max-w-7xl mx-auto px-6 py-20 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-        <Reveal>
-          <h2 className="font-display text-3xl sm:text-4xl text-ink leading-tight mb-4">
+          <Reveal delay={0.15}>
+            <h2 className="font-display text-3xl sm:text-4xl text-ink leading-tight mb-4">
             28+ YEARS WORKING FOR THE<br />INTERNAL REVENUE SERVICE
           </h2>
-          <Link to="/about" className="text-primary font-display text-sm tracking-widest uppercase inline-flex items-center gap-2">
-            About Our Company <ArrowRight size={14} />
-          </Link>
-        </Reveal>
-        <Reveal delay={0.15}>
           <p className="text-ink-soft leading-relaxed">
             Tanya has extensive experience in federal income tax matters, and now
             assists her clients in preparation of their income tax returns as well
@@ -79,10 +75,33 @@ export default function Home() {
             your tax preparations and more.
           </p>
         </Reveal>
+        <Reveal>
+          
+          <div
+            className="relative rounded-xl overflow-hidden shadow-card h-[420px] flex items-end p-8 bg-cover bg-center"
+            style={{
+              backgroundImage: `url(${atHerDesk})`,
+            }}
+          >
+            {/* Dark overlay for readability */}
+            <div className="absolute inset-0 bg-black/25" />
+
+            <div className="relative z-10 text-white">
+              <p className="font-display text-sm tracking-widest">
+                AT HER DESK
+              </p>
+
+              <p className="text-xs text-white/70">
+                New Braunfels, TX
+              </p>
+            </div>
+          </div>
+      
+        </Reveal>
+     
       </section>
 
       {/* SERVICES */}
-    
       <section className="bg-section py-20">
         <div className="max-w-7xl mx-auto px-6">
 
@@ -138,6 +157,7 @@ export default function Home() {
           {blogPosts.slice(0, 3).map((post, i) => (
             <Reveal key={post.title} delay={i * 0.1}>
              
+              
               <div className="relative h-64 rounded-lg overflow-hidden shadow-card hover:shadow-card-hover transition-all duration-300 group cursor-pointer">
 
                 {/* Background Image */}
