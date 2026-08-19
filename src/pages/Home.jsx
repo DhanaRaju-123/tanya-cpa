@@ -21,15 +21,7 @@ export default function Home() {
     <div>
       {/* HERO */}
       <section className="relative h-[100vh] min-h-[560px] flex items-center overflow-hidden bg-primary-dark">
-        {/* <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          className="absolute inset-0 w-full h-full object-cover"
-        >
-          <source src="/videos/monstera-hero.mp4" type="video/mp4" />
-        </video> */}
+    
         <video
           autoPlay
           muted
