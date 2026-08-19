@@ -82,29 +82,7 @@ export default function Home() {
       </section>
 
       {/* SERVICES */}
-      {/* <section className="bg-section py-20">
-        <div className="max-w-7xl mx-auto px-6">
-          <Reveal className="flex items-center gap-4 mb-12">
-            <span className="w-3 h-3 rounded-full bg-primary" />
-            <h2 className="font-display text-3xl text-ink">SERVICES WE OFFER</h2>
-          </Reveal>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-border rounded-xl overflow-hidden shadow-card">
-            {services.map((s, i) => (
-              <Reveal key={s.title} delay={i * 0.06} y={16}>
-                <div className="bg-white p-8 h-full hover:bg-primary-light/40 transition-colors">
-                  <div className="w-12 h-12 rounded-lg bg-primary-light flex items-center justify-center mb-4">
-                    <s.icon className="text-primary" size={22} />
-                  </div>
-                  <h3 className="font-display text-lg text-ink mb-2">{s.title}</h3>
-                  <p className="text-sm text-ink-soft leading-relaxed">{s.blurb}</p>
-                </div>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section> */}
-      {/* SERVICES */}
+    
       <section className="bg-section py-20">
         <div className="max-w-7xl mx-auto px-6">
 
@@ -159,31 +137,7 @@ export default function Home() {
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
           {blogPosts.slice(0, 3).map((post, i) => (
             <Reveal key={post.title} delay={i * 0.1}>
-              {/* <div className={`relative h-64 rounded-lg overflow-hidden bg-gradient-to-br ${post.color} shadow-card hover:shadow-card-hover transition-shadow group cursor-pointer`}>
-                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/35 transition-colors" />
-                <div className="absolute bottom-0 p-5">
-                  <span className="text-[10px] tracking-[0.2em] text-white/70 font-display">{post.tag}</span>
-                  <h3 className="text-white font-display text-lg leading-snug mt-1">{post.title}</h3>
-                </div>
-              </div> */}
-              {/* <div
-                className="relative h-64 rounded-lg overflow-hidden shadow-card hover:shadow-card-hover transition-all duration-300 group cursor-pointer bg-cover bg-center"
-                style={{
-                  backgroundImage: `url(${post.image})`,
-                }}
-              >
-                <div className="absolute inset-0 bg-black/30 group-hover:bg-black/45 transition-colors duration-300" />
-
-                <div className="absolute inset-x-0 bottom-0 p-5">
-                  <span className="text-[10px] tracking-[0.2em] text-white/80 font-display">
-                    {post.tag}
-                  </span>
-
-                  <h3 className="text-white font-display text-lg leading-snug mt-1">
-                    {post.title}
-                  </h3>
-                </div>
-              </div> */}
+             
               <div className="relative h-64 rounded-lg overflow-hidden shadow-card hover:shadow-card-hover transition-all duration-300 group cursor-pointer">
 
                 {/* Background Image */}
