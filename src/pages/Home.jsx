@@ -21,7 +21,7 @@ export default function Home() {
     <div>
       {/* HERO */}
       <section className="relative h-[100vh] min-h-[560px] flex items-center overflow-hidden bg-primary-dark">
-        <video
+        {/* <video
           autoPlay
           muted
           loop
@@ -29,6 +29,18 @@ export default function Home() {
           className="absolute inset-0 w-full h-full object-cover"
         >
           <source src="/videos/monstera-hero.mp4" type="video/mp4" />
+        </video> */}
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover"
+        >
+          <source
+            src={`${import.meta.env.BASE_URL}videos/monstera-hero.mp4`}
+            type="video/mp4"
+          />
         </video>
         <div className="" />
 
@@ -101,48 +113,48 @@ export default function Home() {
         </div>
       </section> */}
       {/* SERVICES */}
-<section className="bg-section py-20">
-  <div className="max-w-7xl mx-auto px-6">
+      <section className="bg-section py-20">
+        <div className="max-w-7xl mx-auto px-6">
 
-    <Reveal className="flex items-center gap-4 mb-12">
-      <span className="w-3 h-3 rounded-full bg-primary" />
-      <h2 className="font-display text-3xl text-ink">
-        SERVICES WE OFFER
-      </h2>
-    </Reveal>
+          <Reveal className="flex items-center gap-4 mb-12">
+            <span className="w-3 h-3 rounded-full bg-primary" />
+            <h2 className="font-display text-3xl text-ink">
+              SERVICES WE OFFER
+            </h2>
+          </Reveal>
 
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-border rounded-xl overflow-hidden shadow-card">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-border rounded-xl overflow-hidden shadow-card">
 
-      {services.map((s, i) => (
-        <Reveal key={s.title} delay={i * 0.06} y={16}>
-          <div className="bg-white p-8 h-full hover:bg-primary-light/40 transition-colors">
+            {services.map((s, i) => (
+              <Reveal key={s.title} delay={i * 0.06} y={16}>
+                <div className="bg-white p-8 h-full hover:bg-primary-light/40 transition-colors">
 
-            {/* Service Image */}
-            <div className="w-12 h-12 rounded-lg overflow-hidden mb-4">
-              <img
-                src={s.image}
-                alt={s.title}
-                className="w-full h-full object-cover"
-              />
-            </div>
+                  {/* Service Image */}
+                  <div className="w-12 h-12 rounded-lg overflow-hidden mb-4">
+                    <img
+                      src={s.image}
+                      alt={s.title}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
 
-            {/* Service Title */}
-            <h3 className="font-display text-lg text-ink mb-2">
-              {s.title}
-            </h3>
+                  {/* Service Title */}
+                  <h3 className="font-display text-lg text-ink mb-2">
+                    {s.title}
+                  </h3>
 
-            {/* Service Description */}
-            <p className="text-sm text-ink-soft leading-relaxed">
-              {s.blurb}
-            </p>
+                  {/* Service Description */}
+                  <p className="text-sm text-ink-soft leading-relaxed">
+                    {s.blurb}
+                  </p>
+
+                </div>
+              </Reveal>
+            ))}
 
           </div>
-        </Reveal>
-      ))}
-
-    </div>
-  </div>
-</section>
+        </div>
+      </section>
 
       {/* RESOURCES PREVIEW */}
       <section className="max-w-7xl mx-auto px-6 py-20">
@@ -241,10 +253,10 @@ export default function Home() {
             <div
               className="absolute inset-0"
               style={{
-               backgroundImage: `url(${item.image})`,
+                backgroundImage: `url(${item.image})`,
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
-                
+
               }}
             />
             <div className="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-colors flex items-end p-4">
